@@ -14,7 +14,7 @@ function App() {
 
   console.log(quotes)
 
-  // if (!quotes) return <h1>Loading...</h1>
+  if (!quotes) return <h1>Loading...</h1>
 
   return (
     <div className="App">
