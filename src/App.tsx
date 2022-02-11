@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
+import { Link, Navigate, Route, Router, Routes } from 'react-router-dom'
 import './App.css'
+import Hrader from './comonents/Header'
 import { Quote } from './myTypes'
+import Home from './Pages/Home'
+import RandomQuote from './Pages/RandomQuote'
 
 function App() {
 
@@ -18,15 +22,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Quotes App</h1>
-      <ul>
-      {quotes.map(quote => (
-        <li key={quote.id}>
-          {quote.content} 
-          <strong> ~ {quote.author}</strong>
-        </li>
-      ))}
-      </ul>
+      <Hrader />
+      <Routes>
+      <Route index element={<Navigate to='/quotes' />} />
+        <Route path="/quotes" element={<Home quotes={quotes} />}/>
+        <Route path="/randomQuote" element={<RandomQuote />}/>
+        <Route path="/quotes/:search" element={<RandomQuote />}/>
+      </Routes>
     </div>
   )
 }

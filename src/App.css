@@ -3,15 +3,32 @@
 }
 
 li {
-  text-align: start;
   list-style: none;
+}
+
+.quoteLiEl {
+  text-align: start;
   padding: 1.5rem;
 
   display: grid;
   grid-auto-flow: row;
 }
 
-li strong {
+.quoteLiEl strong {
   padding-left: 1rem;
   font-family: initial;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+.headerLinkEl:hover {
+  text-decoration: underline;
+  color: lightgreen;
 }
