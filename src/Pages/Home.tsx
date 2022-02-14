@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Quote } from "../myTypes"
 
 type Props = {
@@ -8,10 +9,15 @@ export default function Home({ quotes }: Props) {
     return (
         <ul>
             {quotes.map(quote => (
-                <li className='quoteLiEl' key={quote.id}>
-                    {quote.content}
-                    <strong> ~ {quote.author}</strong>
-                </li>
+                <Link to={`/quotes/${quote.id}`}>
+                    <li className='quoteLiEl' key={quote.id}>
+                        <img src={quote.image} alt={`${quote.firstName} image`} />
+                        <div className="quoteDivEl">
+                            <p>{quote.content}</p>
+                            <strong> ~ {quote.firstName} {quote.lastName}</strong>
+                        </div>
+                    </li>
+                </Link>
             ))}
         </ul>
     )

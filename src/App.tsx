@@ -5,6 +5,7 @@ import Hrader from './comonents/Header'
 import { Quote } from './myTypes'
 import Home from './Pages/Home'
 import RandomQuote from './Pages/RandomQuote'
+import SingleQuote from './Pages/SingleQuote'
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
       <Route index element={<Navigate to='/quotes' />} />
         <Route path="/quotes" element={<Home quotes={quotes} />}/>
         <Route path="/randomQuote" element={<RandomQuote />}/>
-        <Route path="/quotes/:search" element={<RandomQuote />}/>
+        <Route path="/quotes/:id" element={<SingleQuote />}/>
       </Routes>
     </div>
   )

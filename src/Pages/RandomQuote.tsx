@@ -13,9 +13,13 @@ export default function RandomQuote() {
       if (!randomQuote) return <h1>Loading...</h1>
 
     return (
-        <p className='quoteLiEl'>
+    <div className="randomQuoteDivEl">
+        <img className="randomQuoteImg" src={randomQuote.image} alt={`${randomQuote.firstName} image`} />
+        <p className='quoteDivEl'>
             {randomQuote.content}
-            <strong> ~ {randomQuote.author}</strong>
+            <strong> ~ {randomQuote.firstName} {randomQuote.lastName}</strong>
         </p>
+    </div>
+
     )
 }
