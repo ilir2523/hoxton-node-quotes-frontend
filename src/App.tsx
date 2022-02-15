@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link, Navigate, Route, Router, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Hrader from './comonents/Header'
 import { Quote } from './myTypes'
+import AddQuote from './Pages/AddQuote'
 import Home from './Pages/Home'
 import RandomQuote from './Pages/RandomQuote'
 import SingleQuote from './Pages/SingleQuote'
@@ -27,6 +28,7 @@ function App() {
       <Routes>
       <Route index element={<Navigate to='/quotes' />} />
         <Route path="/quotes" element={<Home quotes={quotes} />}/>
+        <Route path="/addQuote" element={<AddQuote quotes={quotes} setQuotes={setQuotes} />}/>
         <Route path="/randomQuote" element={<RandomQuote />}/>
         <Route path="/quotes/:id" element={<SingleQuote />}/>
       </Routes>

@@ -21,7 +21,7 @@ li {
   grid-auto-flow: row;
 }
 
-.quoteDivEl p {
+p {
   font-size: 20px;
   font-weight: 400;
 }
@@ -70,4 +70,28 @@ a {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+.headerNavLiEl {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.quote-form {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 0.5rem;
+  width: fit-content;
+  border: solid 1px green;
+  padding: 1.7rem;
+  border-radius: 0.5rem;
+
 }

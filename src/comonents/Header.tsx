@@ -11,6 +11,9 @@ export default function Hrader() {
                     <Link className="headerLinkEl" to={'/randomQuote'}>
                         Random Quote
                     </Link>
+                    <Link className="headerLinkEl" to={'/addQuote'}>
+                        Add Quote
+                    </Link>
                 </li>
             </ul>
         </header>

@@ -22,7 +22,7 @@ export default function SingleQuote() {
       <p className='quoteDivEl'>
         {singleQuote.content}
         <strong> ~ {singleQuote.firstName} {singleQuote.lastName}</strong>
-        {singleQuote.dead? <p>{`Age at death: ${singleQuote.age} years`}</p> : <p>{`Age: ${singleQuote.age} years`}</p> } 
+        {singleQuote.dead? <span>{`Age at death: ${singleQuote.age} years`}</span> : <span>{`Age: ${singleQuote.age} years`}</span> } 
       </p>
     </div>
   )
