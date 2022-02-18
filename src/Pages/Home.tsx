@@ -10,8 +10,8 @@ export default function Home({ quotes }: Props) {
         <>
         <ul>
             {quotes.map(quote => (
-                <Link to={`/quotes/${quote.id}`} key={quote.id}>
-                    <li className='quoteLiEl' key={quote.id}>
+                <Link to={`/quotes/${quote._id}`} key={quote._id}>
+                    <li className='quoteLiEl' key={quote._id}>
                         <img src={quote.image} alt={`${quote.firstName} image`} />
                         <div className="quoteDivEl">
                             <p>{quote.content}</p>

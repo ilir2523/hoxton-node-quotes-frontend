@@ -1,5 +1,5 @@
 export type Quote = {
-    id: number
+    _id: number
     content: string
     firstName: string
     lastName: string
